@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/tasks.css">
+    <link rel="stylesheet" href="../css/nav-bar.css">
+    <link rel="stylesheet" href="../css/common.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato|Roboto" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
+
+    <title>ToDo</title>
+</head>
+<body>
+<header>
+    <nav></nav>
+    <div id="navbar">
+
+        <div id="app-title">
+            <!-- <div id="check">✅</div> -->
+            <div><h1>ToDo</h1></div>
+        </div>
+        <div class="logout-block">
+            <button class="logout">Logout</button>
+        </div>
+    </div>
+</header>
+<main id="app">
+    <section id="board-form">
+        <div id="infos">
+            <div class="square"></div>
+            <div id="infos-content">
+                <div class="infos-title"><h3>Board Title</h3></div>
+
+            </div>
+        </div>
+        <div id="add-task-form">
+            <div id="color-square">
+                <input type="color" id="primary_color" value="#FFFFFF">
+            </div>
+
+            <input id="task-value" placeholder="Add task">
+            <button id="add-task">+</button>
+        </div>
+    </section>
+    <section id="columns">
+        <div class="column dropzone">
+            <h2 class="column-title">Todo</h2>
+
+            <ul class="tasks" id="tasks-added">
+                <li class="task fill" draggable="true">
+
+                    <div class="task-content"><h3>Task #1</h3></div>
+                    <button class="pencil">
+                        <img src="../res/NotePencil.svg" alt="Edit">
+                    </button>
+                    <div>
+                        <h4 class="desc">Task Description</h4>
+                    </div>
+
+
+                    <button class="trash">
+                        <img src="../res/trash-can.svg" alt="Delete">
+                    </button>
+                </li>
+            </ul>
+
+        </div>
+        <div class="column dropzone">
+            <h2 class="column-title">Review</h2>
+        </div>
+        <div class="column dropzone">
+            <h2 class="column-title">Done</h2>
+        </div>
+    </section>
+</main>
+</body>
+</html>

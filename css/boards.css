@@ -1,0 +1,67 @@
+/* Boards */
+#boards {
+    margin-top: 80px;
+    display: flex;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+    overflow: auto;
+}
+
+.board {
+    flex: 0 0 auto;
+    width: 340px;
+    height: 200px;
+    box-sizing: border-box;
+    border-radius: 1px;
+    margin-left: 40px;
+    background-color: white;
+}
+
+.board:nth-child(1) {
+    margin-left: 0;
+}
+
+.board:hover {
+    border: 1px solid #A7D7C5;
+    box-shadow: 0 1px 6px #A7D7C5;
+}
+
+.board-title {
+    margin: 24px 0 0 24px;
+    font-family: 'Karla', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    width: 70%;
+}
+
+/* Trash icon */
+
+.trash {
+    position: relative;
+    top: 55%;
+    left: 75%;
+    font-family: 'Karla', sans-serif;
+    background-color: transparent;
+    border: none;
+    color: #54585A;
+}
+
+.trash:hover {
+    color: #c42d1c;
+}
+
+/* Pencil icon */
+
+.pencil {
+    position: relative;
+    top: -15%;
+    left: 87%;
+    font-family: 'Karla', sans-serif;
+    background-color: transparent;
+    border: none;
+    color: #54585A;
+}
+
+.pencil:hover {
+    color: #ffc400;
+}

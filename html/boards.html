@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/boards.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/nav-bar.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato|Roboto" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
+
+    <title>ToDo</title>
+</head>
+<body>
+<header>
+    <nav></nav>
+    <div id="navbar">
+
+        <div id="app-title">
+
+            <div><h1>ToDo</h1></div>
+        </div>
+        <div class="logout-block">
+            <button class="logout">Logout</button>
+        </div>
+    </div>
+</header>
+
+<main id="app">
+    <section id="board-form">
+
+        <div id="add-task-form">
+            <div id="color-square">
+                <input type="color" id="primary_color" value="#FFFFFF">
+            </div>
+
+            <input id="task-value" placeholder="Add task">
+            <button id="add-task">+</button>
+        </div>
+    </section>
+
+    <section id="boards">
+        <div class="board">
+
+            <h2 class="board-title">Board №1</h2>
+            <button class="pencil">
+                <img src="../res/NotePencil.svg" alt="Edit">
+            </button>
+
+            <button class="trash">
+                <img src="../res/trash-can.svg" alt="Delete"/>
+            </button>
+
+        </div>
+        <div class="board dropzone">
+            <h2 class="board-title">Board №2</h2>
+        </div>
+        <div class="board dropzone">
+            <h2 class="board-title">Board №3</h2>
+        </div>
+    </section>
+</main>
+</body>
+</html>

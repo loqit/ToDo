@@ -1,0 +1,145 @@
+input {
+    position: absolute;
+    width: 80%;
+    height: 15%;
+
+    outline: 0;
+    background: #FFFFFF;
+
+    border: 1.5px solid rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    border-radius: 15px;
+
+    font-family: 'Karla', sans-serif;
+    font-size: 20px;
+    line-height: 19px;
+
+    text-align: center;
+
+    color: rgba(0, 0, 0, 0.5);
+}
+
+input[type=text] {
+    left: 10%;
+    top: 25%;
+}
+
+input[type=password] {
+    left: 10%;
+    top: 45%;
+}
+
+.container {
+
+    width: 47%;
+    height: calc(15% * 5);
+
+    background: #F6FBF9;
+    border-radius: 49px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+button {
+    position: absolute;
+    width: 80%;
+    height: 15%;
+    left: 10%;
+    top: calc(50% - 15% / 2 + 141px);
+
+    background: #84C7AE;
+    border-radius: 23px;
+    border: none;
+}
+
+.nav-sing {
+    position: absolute;
+    width: 346px;
+    height: 23px;
+
+    left: calc(50% - 346px / 2 + 6px);
+    top: calc(50% - 23px / 2 + 214px);
+
+
+    font-family: 'Karla', sans-serif;
+    font-size: 21px;
+    line-height: 28px;
+
+    text-align: center;
+
+    color: #32403B;
+    cursor: default;
+}
+
+.btn-text {
+    font-family: 'Karla', sans-serif;
+    font-size: 33px;
+    line-height: 44px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+body {
+    background: #A7D7C5;
+    overflow: hidden;
+}
+
+.register-title {
+
+    font-family: 'Karla', sans-serif;
+    font-size: 48px;
+    line-height: 72px;
+    text-align: center;
+    color: #212B27;
+}
+
+.underline {
+    text-decoration: underline;
+
+}
+
+@media only screen and (max-width: 70em) {
+
+    .container {
+        width: 90%;
+        height: calc(50px * 5 + 130px);
+    }
+
+    input {
+        width: 90%;
+        height: 50px;
+    }
+
+    .btn-text {
+        font-size: 26px;
+    }
+
+    .registr-title {
+        font-size: 34px;
+    }
+
+    input[type=text] {
+        left: 5%;
+        top: calc(50% - 50px / 2 - 17%);
+    }
+
+    input[type=password] {
+        left: 5%;
+        top: calc(50% - 50px / 2 + 2%);
+    }
+
+    button {
+        width: 90%;
+        height: 50px;
+        left: 5%;
+        top: calc(50% - 50px / 2 + 99px);
+    }
+
+    .nav-sing {
+        top: 80%;
+        font-size: 18px;
+    }
+}
