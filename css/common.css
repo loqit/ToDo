@@ -1,5 +1,7 @@
 a {
     cursor: pointer;
+    text-decoration: none;
+    outline: none;
 }
 input:focus::-webkit-input-placeholder 
 {
