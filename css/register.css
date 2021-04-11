@@ -63,7 +63,6 @@ button {
     left: calc(50% - 346px / 2 + 6px);
     top: calc(50% - 23px / 2 + 214px);
 
-
     font-family: 'Karla', sans-serif;
     font-size: 21px;
     line-height: 28px;
@@ -85,6 +84,7 @@ button {
 body {
     background: #A7D7C5;
     overflow: hidden;
+    position: fixed;
 }
 
 .register-title {
@@ -101,12 +101,12 @@ body {
     color: #212B27;
 }
 
-
 @media only screen and (max-width: 70em) {
 
     .container {
         width: 90%;
         height: calc(50px * 5 + 130px);
+
     }
 
     input {
@@ -118,7 +118,7 @@ body {
         font-size: 26px;
     }
 
-    .registr-title {
+    .register-title {
         font-size: 34px;
     }
 

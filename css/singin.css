@@ -66,6 +66,7 @@ button {
 body {
     background: #A7D7C5;
     overflow: hidden;
+    position: fixed;
 }
 
 .sing-title {
@@ -79,17 +80,7 @@ body {
     color: #212B27;
 }
 
-.back {
-    display: flex;
-}
-
 @media only screen and (max-width: 70em) {
-
-    .back {
-        right: 30%;
-        width: 90%;
-        height: 90%;
-    }
 
     .container {
         width: 90%;
