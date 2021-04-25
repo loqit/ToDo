@@ -18,11 +18,10 @@
 <body>
 <header>
     <nav></nav>
-    <div id="navbar">
+    <div class="navbar">
 
-        <div id="app-title">
-
-            <div><h1>ToDo</h1></div>
+        <div class="app-title">
+            <h1>ToDo</h1>
         </div>
         <div class="logout-block">
             <button class="logout">Logout</button>
@@ -30,20 +29,20 @@
     </div>
 </header>
 
-<main id="app">
-    <section id="board-form">
+<main class="app">
+    <section class="board-form">
 
-        <div id="add-task-form">
-            <div id="color-square">
-                <input type="color" id="primary_color" value="#FFFFFF">
+        <div class="add-task-form">
+            <div class="color-square">
+                <input type="color" class="primary_color" id="primaryColor" value="#FFFFFF">
             </div>
 
-            <input id="task-value" placeholder="Add task">
-            <button id="add-task">+</button>
+            <input id="taskValue" class="task-value" placeholder="Create Board">
+            <button id="addTask" class="add-task">+</button>
         </div>
     </section>
 
-    <section id="boards">
+    <section class="boards">
         <div class="board">
 
             <h2 class="board-title">Board №1</h2>
@@ -64,5 +63,6 @@
         </div>
     </section>
 </main>
+
 </body>
 </html>

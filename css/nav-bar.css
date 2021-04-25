@@ -1,12 +1,3 @@
-#primary_color::-webkit-color-swatch-wrapper {
-    padding: 0;
-}
-
-#primary_color::-webkit-color-swatch {
-    border: none;
-    border-radius: 100%;
-}
-
 .logout {
     color: white;
     background-color: #A7D7C5;
@@ -25,13 +16,13 @@
     left: calc(100% - 110px);
 }
 
-#add-task-form {
+.add-task-form {
     position: absolute;
     right: 12.5%;
     display: flex;
 }
 
-#add-task-form #task-value {
+.add-task-form .task-value {
     padding-left: 16px;
     margin-top: 1px;
     height: 46px;
@@ -44,16 +35,16 @@
     border: none;
 }
 
-#add-task-form #task-value ::placeholder {
+.add-task-form .task-value ::placeholder {
     color: #E4E6E8;
 }
 
-#add-task-form #task-value:focus {
+.add-task-form .task-value:focus {
     outline: none;
     box-shadow: 0 4px 20px rgba(167, 215, 197, 1);
 }
 
-#add-task-form #add-task {
+.add-task-form .add-task {
     background: #A7D7C5;
     border: none;
     border-radius: 4px;
@@ -66,11 +57,11 @@
     color: #FFFFFF;
 }
 
-#add-task-form #add-task:focus {
+.add-task-form .add-task:focus {
     outline: 0;
 }
 
-#add-task-form #add-task:hover {
+.add-task-form .add-task:hover {
     box-shadow: 0 4px 20px #A7D7C5;
 }
 
@@ -117,11 +108,11 @@ header {
     border-bottom: solid 1px lightgray;
 }
 
-#navbar {
+.navbar {
     display: flex;
 }
 
-#navbar #app-title {
+.navbar .app-title {
     display: flex;
     position: absolute;
     top: 40px;
@@ -129,11 +120,11 @@ header {
     transform: translate(-50%, -50%);
 }
 
-#navbar #app-title #check {
+.navbar .app-title #check {
     margin-top: 28px;
 }
 
-#navbar #app-title h1 {
+.navbar .app-title h1 {
     margin-top: 22px;
     font-family: 'Karla', sans-serif;
     font-style: normal;
@@ -151,11 +142,11 @@ body {
     background-color: #F5F7FA;
 }
 
-#app {
+.app {
     margin-left: 5%;
 }
 
-#board-form {
+.board-form {
     margin-top: 60px;
     padding-bottom: 10px;
     display: flex;
@@ -164,7 +155,7 @@ body {
 
 /* Color peaker */
 
-#color-square {
+.color-square {
     height: 50px;
     width: 50px;
     border-radius: 9px;
@@ -172,7 +163,7 @@ body {
     margin-right: 8px;
 }
 
-#primary_color {
+.primary_color {
     margin-top: 11px;
     margin-left: 11px;
 
@@ -184,10 +175,19 @@ body {
     outline: none;
     -webkit-appearance: none;
 }
+.primary_color::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+
+.primary_color::-webkit-color-swatch {
+    border: none;
+    border-radius: 100%;
+}
 
 
 @media only screen and (max-width: 70em) {
     #navbar #app-title {
         margin-left: 10px;
     }
+
 }

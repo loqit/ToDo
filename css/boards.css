@@ -1,5 +1,5 @@
 /* Boards */
-#boards {
+.boards {
     margin-top: 80px;
     display: flex;
     flex-wrap: nowrap;
@@ -36,10 +36,17 @@
 
 /* Trash icon */
 
-.trash {
+.board .trash {
     position: relative;
+
     top: 55%;
     left: 75%;
+
+     /*
+    bottom: 1%;
+    right: 5%;
+
+      */
     font-family: 'Karla', sans-serif;
     background-color: transparent;
     border: none;
@@ -52,17 +59,24 @@
 
 /* Pencil icon */
 
-.pencil {
+.board .pencil {
     position: relative;
+
     top: -15%;
     left: 87%;
+
+    /*
+    top: 15%;
+    right: 5%;
+
+     */
     font-family: 'Karla', sans-serif;
     background-color: transparent;
     border: none;
     color: #54585A;
 }
 
-.pencil:hover {
+.board .pencil:hover {
     color: #ffc400;
 }
 

@@ -1,9 +1,9 @@
 /* Board Info */
-#infos {
+.infos {
     display: flex;
 }
 
-#infos .square {
+.infos .square {
     height: 50px;
     width: 50px;
     border-radius: 9px;
@@ -11,7 +11,7 @@
     box-shadow: 0 4px 20px #A7D7C5;
 }
 
-#infos .infos-title {
+.infos .infos_title {
     font-family: 'Karla', sans-serif;
     font-weight: 500;
     font-size: 20px;
@@ -26,7 +26,7 @@ a {
 
 /* Columns */
 
-#columns {
+.columns {
     margin-top: 40px;
     display: flex;
     flex-wrap: nowrap;
@@ -42,6 +42,9 @@ a {
     border-radius: 1px;
     margin-left: 40px;
     background-color: white;
+
+    /* Make column scrollable */
+    overflow-y: auto;
 }
 
 .column:nth-child(1) {
@@ -64,7 +67,11 @@ a {
 
 .task {
     list-style-type: none;
-    right: 15px;
+
+    /*margin: 16px 16px 0 0;*/
+    margin: 16px 0 0 24px;
+    padding: 10px 8px 10px 10px;
+
     position: relative;
     background-color: white;
     border: 1px solid #EBEDF0;
@@ -97,40 +104,51 @@ a {
 }
 
 .task .trash {
-    position: relative;
-
+    position: absolute;
+    /*
     left: 86%;
-    top: 16px;
+    top: 16px;*/
+
+    bottom: 15%;
+    right: 5%;
     background-color: transparent;
     border: none;
-    color: #54585A;
+    /*color: #54585A;*/
+    color: aqua;
 }
 
 .task .trash:hover {
     color: #c42d1c;
 }
 
-.pencil {
-    position: relative;
-
+.task .pencil {
+    position: absolute;
+/*
     left: 86%;
     top: -25px;
-
+*/
+    top: 15%;
+    right: 5%;
     font-family: 'Karla', sans-serif;
     background-color: transparent;
     border: none;
     color: #54585A;
 }
 
-.desc {
-    margin: 0 0 5px;
+
+
+
+
+.task .desc {
+    position: absolute;
+
     padding-left: 16px;
     width: 70%;
     font-family: 'Karla', sans-serif;
     font-size: 14px;
 }
 
-.pencil:hover {
+.task .pencil:hover {
     color: #ffc400;
 }
 
@@ -154,10 +172,18 @@ a {
     .task {
         width: 95%;
     }
+
 }
 
-@media only screen and (max-width: 700px) {
-    #infos {
+
+@media only screen and (max-width: 600px) {
+    .infos {
+        display: flex;
         margin-top: 75px;
     }
+}
+
+ul {
+    /* Remove padding */
+    padding: 0;
 }
