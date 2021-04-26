@@ -1,0 +1,115 @@
+input {
+    position: absolute;
+    width: 402px;
+    height: 57px;
+
+    outline: 0;
+    background: #FFFFFF;
+
+    border: 1.5px solid rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    border-radius: 15px;
+
+    font-family: 'Karla', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 19px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+input[type=text] {
+    left: calc(50% - 402px / 2);
+    top: calc(50% - 57px / 2 - 57px);
+}
+
+input[type=password] {
+    left: calc(50% - 402px / 2);
+    top: calc(50% - 57px / 2 + 40px);
+}
+
+.container {
+    width: 488px;
+    height: 475px;
+    background: #F6FBF9;
+    border-radius: 49px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+button {
+    position: absolute;
+    width: 273px;
+    height: 61px;
+    left: calc(50% - 273px / 2 + 3px);
+    top: calc(50% - 61px / 2 + 139px);
+
+    background: #84C7AE;
+    border: none;
+    border-radius: 20px;
+}
+
+.btn-text {
+    font-family: 'Karla', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 33px;
+    line-height: 44px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+body {
+    background: #A7D7C5;
+    overflow: hidden;
+    position: fixed;
+}
+
+.sing-title {
+    font-family: 'Karla', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 72px;
+    text-align: center;
+
+    color: #212B27;
+}
+
+@media only screen and (max-width: 70em) {
+
+    .container {
+        width: 90%;
+        height: calc(50px * 4 + 130px);
+    }
+
+    input {
+        width: 90%;
+        height: 50px;
+    }
+
+    .sing-title {
+        font-size: 40px;
+    }
+
+    input[type=text] {
+        left: 5%;
+        top: calc(50% - 50px / 2 - 40px);
+    }
+
+    input[type=password] {
+        left: 5%;
+        top: calc(50% - 50px / 2 + 28px);
+    }
+
+    button {
+        width: 90%;
+        height: 50px;
+        left: 5%;
+        top: calc(50% - 50px / 2 + 99px);
+    }
+}

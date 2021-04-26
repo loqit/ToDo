@@ -1,0 +1,20 @@
+a {
+    cursor: pointer;
+    text-decoration: none;
+    outline: none;
+}
+input:focus::-webkit-input-placeholder 
+{
+    color: transparent;
+}
+
+button {
+    outline: none;
+    cursor: pointer;
+}
+h1, h2, h3, h4 {
+    cursor: default;
+}
+* {
+    box-sizing: border-box;
+}
