@@ -7,11 +7,22 @@
     <link rel="stylesheet" href="../css/boards.css">
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/nav-bar.css">
+    <link rel="stylesheet" href="../css/edit_from.css">
 
     <link href="https://fonts.googleapis.com/css?family=Lato|Roboto" rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-database.js"></script>
+    <script src="../js/app.js" > </script>
+
+    <script type="module" src="../js/boards.js"> </script>
+
 
     <title>ToDo</title>
 </head>
@@ -24,12 +35,29 @@
             <h1>ToDo</h1>
         </div>
         <div class="logout-block">
-            <button class="logout">Logout</button>
+            <button class="logout" id="logout-btn">Logout</button>
         </div>
     </div>
 </header>
 
 <main class="app">
+    <div id="editModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content edit-board">
+            <div class="modal-form">
+                <div class="color_peacker">
+                    <input type="color" class="color-circle" id="boardColor" value="#FFFFFF">
+                </div>
+
+                <input type="text" id="boardTitle" class="task_title">
+            </div>
+
+            <button type="submit" class="save-btn save-board" id="saveBoardEdit">Save</button>
+        </div>
+
+    </div>
+
     <section class="board-form">
 
         <div class="add-task-form">
@@ -37,32 +65,15 @@
                 <input type="color" class="primary_color" id="primaryColor" value="#FFFFFF">
             </div>
 
-            <input id="taskValue" class="task-value" placeholder="Create Board">
-            <button id="addTask" class="add-task">+</button>
+            <input id="boardValue" class="task-value" placeholder="Create Board">
+            <button id="addBoard" class="add-task">+</button>
         </div>
     </section>
 
-    <section class="boards">
-        <div class="board">
+    <section class="boards" id="boardAdded">
 
-            <h2 class="board-title">Board №1</h2>
-            <button class="pencil">
-                <img src="../res/NotePencil.svg" alt="Edit">
-            </button>
-
-            <button class="trash">
-                <img src="../res/trash-can.svg" alt="Delete"/>
-            </button>
-
-        </div>
-        <div class="board dropzone">
-            <h2 class="board-title">Board №2</h2>
-        </div>
-        <div class="board dropzone">
-            <h2 class="board-title">Board №3</h2>
-        </div>
     </section>
 </main>
-
+<script src="../js/auth.js" ></script>
 </body>
 </html>
