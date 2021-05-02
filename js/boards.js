@@ -74,9 +74,9 @@ async function showBoard(board) {
     trash.classList.add('trash');
     trash.addEventListener('click',   (e) => {
         e.stopPropagation();
-        let list = e.target.parentNode.parentNode;
+        let list = e.target.parentNode.parentNode.parentNode;
         // Get current task
-        let element = e.target.parentNode;
+        let element = e.target.parentNode.parentNode;
         list.removeChild(element);
 
         db.ref('boards/' + board.id).remove();

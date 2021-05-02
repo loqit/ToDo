@@ -86,9 +86,10 @@ async function showTask(task) {
     let trash = document.createElement('button');
     trash.classList.add('trash');
     trash.addEventListener('click', (e) => {
-        let list = e.target.parentNode.parentNode;
+
+        let list = e.target.parentNode.parentNode.parentNode;
         // Get current task
-        let element = e.target.parentNode;
+        let element = e.target.parentNode.parentNode;
         list.removeChild(element);
 
         db.ref('tasks/' + task.id).remove();
