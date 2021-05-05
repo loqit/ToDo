@@ -48,7 +48,7 @@ if (logoutBtn) {
 
         auth.signOut()
             .then(() => {
-                location.replace('../html/register.html');
+                location.replace('../html/index.html');
             });
     });
 }
