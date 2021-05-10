@@ -67,7 +67,7 @@ a {
 
 .task {
     list-style-type: none;
-
+    cursor: grab;
     /*margin: 16px 16px 0 0;*/
     margin: 16px 0 0 24px;
     padding: 10px 8px 10px 10px;
@@ -101,6 +101,7 @@ a {
     box-sizing: border-box;
     box-shadow: 0 1px 4px #A7D7C5;
     border-radius: 2px;
+
 }
 
 .task .trash {
@@ -136,12 +137,9 @@ a {
 }
 
 
-
-
-
 .task .desc {
     position: absolute;
-
+    top: 45%;
     padding-left: 16px;
     width: 70%;
     font-family: 'Karla', sans-serif;
