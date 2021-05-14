@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded",  function() {
     let userId = localStorage['userId'] || '';
     const params = new URLSearchParams(window.location.search);
     boardId = JSON.parse(params.get("boardId"));
+
     getTasks(userId, boardId, async task => {
         if (tasks[task.id] === undefined) { // Display board only once
             tasks[task.id] = task;
@@ -22,14 +23,23 @@ document.addEventListener("DOMContentLoaded",  function() {
         }
     });
     setBoardInfo();
+    setTimeout(function(){ removeElementsByClass('task_skeleton') }, 300);
 });
 
 async function displayTask(task) {
+    removeElementsByClass('task_skeleton')
     await showTask(task)
 }
 
-function setBoardInfo() {
+function removeElementsByClass(className){
+    const elements = document.getElementsByClassName(className);
+    while(elements.length > 0){
+        elements[0].parentNode.removeChild(elements[0]);
+    }
+}
 
+function setBoardInfo() {
+    removeElementsByClass('infos_title_skeleton')
     getBoard(boardId, (board) => {
         const colorSquare = document.getElementById('colorSquare');
         const boardTitle = document.getElementById('boardTitle');

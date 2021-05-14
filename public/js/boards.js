@@ -1,25 +1,36 @@
-import { getBoards, saveBoard, updateBoard } from "./database.js"
+import { getBoards, saveBoard, updateBoard } from "./database.js";
 
 const trashIcon = "../res/trash-can.svg";
 const pencilIcon = "../res/NotePencil.svg";
-
 
 const db = firebase.database();
 let userId = '';
 let boards = {};
 let boardId = '';
 
+
+
 document.addEventListener("DOMContentLoaded", function() {
     userId = localStorage['userId'] || '';
+
     getBoards(userId, async board => {
         if (boards[board.id] === undefined) { // Display board only once
             boards[board.id] = board;
             await displayBoard(board);
         }
     });
+    setTimeout(function(){ removeElementsByClass('board-skeleton') }, 300);
 });
 
+function removeElementsByClass(className){
+    const elements = document.getElementsByClassName(className);
+    while(elements.length > 0){
+        elements[0].parentNode.removeChild(elements[0]);
+    }
+}
+
 async function displayBoard(board) {
+    removeElementsByClass('board-skeleton')
     await showBoard(board);
 }
 
