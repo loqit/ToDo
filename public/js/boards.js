@@ -14,15 +14,17 @@ document.addEventListener("DOMContentLoaded", function() {
     userId = localStorage['userId'] || '';
 
     getBoards(userId, async board => {
+
         if (boards[board.id] === undefined) { // Display board only once
             boards[board.id] = board;
             await displayBoard(board);
         }
+    }, function () {
+        removeElementsByClass('board-skeleton');
     });
-    setTimeout(function(){ removeElementsByClass('board-skeleton') }, 300);
 });
 
-function removeElementsByClass(className){
+function removeElementsByClass(className) {
     const elements = document.getElementsByClassName(className);
     while(elements.length > 0){
         elements[0].parentNode.removeChild(elements[0]);
@@ -30,7 +32,7 @@ function removeElementsByClass(className){
 }
 
 async function displayBoard(board) {
-    removeElementsByClass('board-skeleton')
+    removeElementsByClass('board-skeleton');
     await showBoard(board);
 }
 
@@ -86,7 +88,7 @@ async function showBoard(board) {
     trash.addEventListener('click',   (e) => {
         e.stopPropagation();
         let list = e.target.parentNode.parentNode.parentNode;
-        // Get current task
+        // Get current board
         let element = e.target.parentNode.parentNode;
         list.removeChild(element);
 

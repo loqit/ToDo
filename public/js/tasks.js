@@ -21,9 +21,9 @@ document.addEventListener("DOMContentLoaded",  function() {
             tasks[task.id] = task;
             await displayTask(task);
         }
-    });
+    }, function(){ removeElementsByClass('task_skeleton') });
     setBoardInfo();
-    setTimeout(function(){ removeElementsByClass('task_skeleton') }, 300);
+
 });
 
 async function displayTask(task) {
@@ -129,7 +129,6 @@ async function showTask(task) {
             description: descInput,
             status: taskData.status
         }
-        console.log(newTask)
         updateTask(newTask, taskData.id);
 
         let modal = document.getElementById('editModal')
@@ -181,7 +180,6 @@ const dragDrop = (event) => {
     getTask(task.id, (newTask) => {
         newTask.status = newStatus;
         updateTask(newTask, task.id);
-        console.log(newTask);
     })
     event.target.append(task);
 }
