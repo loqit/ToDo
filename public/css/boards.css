@@ -15,7 +15,22 @@
     border-radius: 1px;
     margin-left: 40px;
     background-color: white;
-     cursor: pointer;
+    cursor: pointer;
+}
+
+.board-skeleton {
+    flex: 0 0 auto;
+    box-sizing: border-box;
+    border-radius: 1px;
+    margin-left: 40px;
+    width: 340px;
+    height: 200px;
+    background: gainsboro;
+
+    animation: skeleton-pulse 1s infinite;
+}
+.board-skeleton:nth-child(1) {
+    margin-left: 0;
 }
 
 .board:nth-child(1) {
@@ -81,3 +96,11 @@
     color: #ffc400;
 }
 
+@keyframes skeleton-pulse {
+    0% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}

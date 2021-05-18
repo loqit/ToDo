@@ -36,7 +36,7 @@ export function saveBoard(title, colorValue) {
     });
 }
 
-export function getBoards(userId, displayBoard) {
+export function getBoards(userId, displayBoard, removeElements) {
 
     db
         .ref('users/' + userId + '/boards/')
@@ -51,15 +51,15 @@ export function getBoards(userId, displayBoard) {
                         .on('value', snap => {
                             const boardVal = snap.val();
                             if (!boardVal) return;
+
                             boardVal.id = board.boardId;
                             displayBoard(boardVal);
                         });
                 });
-
+            } else {
+                removeElements();
             }
-
         });
-
 }
 
 export function getBoard(boardId, setBoard) {
@@ -85,7 +85,7 @@ export function getTask(taskId, setTask) {
         });
 }
 
-export function getTasks(userId, boardId, displayTasks) {
+export function getTasks(userId, boardId, displayTasks, removeElements) {
     db
         .ref('users/' + userId + '/boards/' + boardId + '/tasks/')
         .on('value', snap => {
@@ -103,6 +103,8 @@ export function getTasks(userId, boardId, displayTasks) {
                             displayTasks(taskVal);
                         });
                 });
+            } else {
+                removeElements();
             }
 
         });
